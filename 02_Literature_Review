@@ -1,91 +1,108 @@
-## 1. Literature Review Analysis Table
+1. Literature Review Analysis 
 
-| Theme | Key Studies | Methods | Key Findings | Limitations |
-|-------|-------------|---------|--------------|-------------|
-| Soft Computing & Multimodal Biometrics | Hussain et al. (2025); Rajakumar & Shanthi (2025); Chitrapu et al. (2026); Houssein et al. (2023) | CNN-LSTM, Multimodal CNN, Adaptive Focal Loss, Homomorphic Encryption | 98–100% accuracy; multimodal improves detection | Adds complexity, cross-sensor issues, privacy concerns |
-| Unsupervised & Deep Learning for Anti-Spoofing | Zhang et al. (2023); Kothadiya et al. (2023); Yook et al. (2024); Adami et al. (2024); Li & Ramachandra (2025) | ResNet, Transformer, Autoencoder, Attention Mechanism | Deep learning dominates PAD; unsupervised detects unseen attacks | Generalisation to unseen attacks remains a challenge |
-| Systematic Reviews & Emerging Challenges | Ametefe et al. (2024); Casula et al. (2024); Herke (2026); Li & Ramachandra (2025) | Literature Review, Comparative Analysis | No universal algorithm exists; puppet attacks remain underexplored | Most studies lack real-world validation |
+Theme: Soft Computing & Multimodal Biometrics
+Key Studies: Hussain et al. (2025); Rajakumar & Shanthi (2025); Chitrapu et al. (2026); Houssein et al. (2023)
+Methods: CNN-LSTM, Multimodal CNN, Adaptive Focal Loss, Homomorphic Encryption
+Key Findings: 98–100% accuracy; multimodal improves detection
+Limitations: Adds complexity, cross-sensor issues, privacy concerns
 
----
+Theme: Unsupervised & Deep Learning for Anti-Spoofing
+Key Studies: Zhang et al. (2023); Kothadiya et al. (2023); Yook et al. (2024); Adami et al. (2024); Li & Ramachandra (2025)
+Methods: ResNet, Transformer, Autoencoder, Attention Mechanism
+Key Findings: Deep learning dominates PAD; unsupervised detects unseen attacks
+Limitations: Generalisation to unseen attacks remains a challenge
 
-## 2. Comparison of Existing Techniques
+Theme: Systematic Reviews & Emerging Challenges
+Key Studies: Ametefe et al. (2024); Casula et al. (2024); Herke (2026); Li & Ramachandra (2025)
+Methods: Literature Review, Comparative Analysis
+Key Findings: No universal algorithm exists; puppet attacks remain underexplored
+Limitations: Most studies lack real-world validation
 
-| Approach | Advantages | Disadvantages |
-|----------|------------|---------------|
-| Traditional Handcrafted Features (LBP, HOG, GLDS) | Simple, lightweight | Poor generalisation to unseen attacks |
-| Deep Learning (CNN, ResNet, Transformer) | Learns complex patterns, high accuracy | Requires large data, computationally expensive |
-| Unsupervised Learning (Autoencoder) | Detects unseen attacks without spoof samples | Limited training data, cross-sensor issues |
-| Multimodal Biometrics | Improves accuracy and robustness | Adds complexity, privacy concerns |
-| Lightweight Models | Suitable for edge devices | May sacrifice accuracy |
 
----
+2. Comparison of Existing Techniques
 
-## 3. Research Gap Analysis
+Approach: Traditional Handcrafted Features (LBP, HOG, GLDS)
+Advantages: Simple, lightweight
+Disadvantages: Poor generalisation to unseen attacks
 
-| No. | Research Gap | Evidence |
-|-----|--------------|----------|
-| 1 | Limited availability of puppet attack datasets | Li et al. (2024) dataset has only 70 volunteers; lacks demographic diversity; accuracy drops on angled/side pressing |
-| 2 | Variations in puppet attack conditions | Models trained on straight pressing only; fail on angled/side pressing (Li et al., 2024) |
-| 3 | Limited cross-dataset and real-world evaluation | Most studies use controlled benchmarks (Ametefe et al., 2024); not tested on real-world conditions |
-| 4 | Balance between detection performance and computational efficiency | Accurate models are computationally expensive; lightweight models sacrifice accuracy (Yook et al., 2024; Santos et al., 2024) |
+Approach: Deep Learning (CNN, ResNet, Transformer)
+Advantages: Learns complex patterns, high accuracy
+Disadvantages: Requires large data, computationally expensive
 
----
+Approach: Unsupervised Learning (Autoencoder)
+Advantages: Detects unseen attacks without spoof samples
+Disadvantages: Limited training data, cross-sensor issues
 
-## 4. Summary of Methods/Algorithms Identified
+Approach: Multimodal Biometrics
+Advantages: Improves accuracy and robustness
+Disadvantages: Adds complexity, privacy concerns
 
-| Method / Algorithm | Key Studies | Application |
-|--------------------|-------------|-------------|
-| CNN-LSTM | Hussain et al. (2025) | Fingerprint authentication |
-| Multimodal CNN + Adaptive Focal Loss | Rajakumar & Shanthi (2025) | Liveness detection |
-| MobileNetV2 + TAF + CKKS | Chitrapu et al. (2026) | Multimodal face-fingerprint system |
-| LFLDNet (ResNet + Transformer) | Zhang et al. (2023) | Lightweight fingerprint liveness detection |
-| Sequential Attention + ResNet | Kothadiya et al. (2023) | Fingerprint PAD |
-| Unsupervised Autoencoder + CBAM | Adami et al. (2024) | Unseen attack detection |
-| LBP-HOG + SVM | Li et al. (2024) | Puppet attack detection |
+Approach: Lightweight Models
+Advantages: Suitable for edge devices
+Disadvantages: May sacrifice accuracy
 
----
 
-## 5. Relevant Datasets
+3. Research Gap Analysis
 
-| Dataset | Year | Description | Use in Research |
-|---------|------|-------------|-----------------|
-| LivDet | 2017, 2019, 2023 | Fingerprint liveness detection benchmark | PAD evaluation |
-| FVC | 2000, 2002, 2004 | Fingerprint verification competition | Recognition and authentication |
-| Puppet Attack Dataset | 2024 | 5,600 images, 70 volunteers | Puppet attack detection |
-| CASIA-FingerV5 | - | Multimodal face-fingerprint dataset | Multimodal biometrics |
-| SOCOFing | - | Fingerprint dataset | Fingerprint recognition |
+1. Limited availability of puppet attack datasets
+   Evidence: Li et al. (2024) dataset has only 70 volunteers; lacks demographic diversity; accuracy drops on angled and side pressing
 
----
+2. Variations in puppet attack conditions
+   Evidence: Models trained on straight pressing only; fail on angled/side pressing (Li et al., 2024)
 
-## 6. Evaluation Metrics Identified
+3. Limited cross-dataset and real-world evaluation
+   Evidence: Most studies use controlled benchmarks (Ametefe et al., 2024); not tested on real-world conditions
 
-| Metric | Full Name | Used In |
-|--------|-----------|---------|
-| Accuracy | - | Classification performance |
-| Precision | - | True positive rate |
-| Recall | - | Sensitivity |
-| F1-Score | - | Harmonic mean of precision and recall |
-| EER | Equal Error Rate | Biometric authentication |
-| FAR | False Acceptance Rate | Authentication systems |
-| FRR | False Rejection Rate | Authentication systems |
-| APCER | Attack Presentation Classification Error Rate | PAD evaluation |
-| BPCER | Bonafide Presentation Classification Error Rate | PAD evaluation |
-| ACER | Average Classification Error Rate | PAD evaluation |
+4. Balance between detection performance and computational efficiency
+   Evidence: Accurate models are computationally expensive; lightweight models sacrifice accuracy (Yook et al., 2024; Santos et al., 2024)
 
----
 
-## 7. References Supporting the Proposed Methodology
+4. Summary of Methods/Algorithms Identified
 
-1. Zhang, K., Huang, S., Liu, E., & Zhao, H. (2023). LFLDNet: Lightweight fingerprint liveness detection based on ResNet and transformer. *Sensors, 23*(15), 7842.
+CNN-LSTM: Hussain et al. (2025) - Fingerprint authentication
+Multimodal CNN + Adaptive Focal Loss: Rajakumar & Shanthi (2025) - Liveness detection
+MobileNetV2 + TAF + CKKS: Chitrapu et al. (2026) - Multimodal face-fingerprint system
+LFLDNet (ResNet + Transformer): Zhang et al. (2023) - Lightweight fingerprint liveness detection
+Sequential Attention + ResNet: Kothadiya et al. (2023) - Fingerprint PAD
+Unsupervised Autoencoder + CBAM: Adami et al. (2024) - Unseen attack detection
+LBP-HOG + SVM: Li et al. (2024) - Puppet attack detection
 
-2. Hussain, A., Murshed, F., Alandoli, M. N., & Aljafari, G. (2025). A hybrid deep learning approach for secure biometric authentication using fingerprint data. *Computers, 14*(5), 178.
 
-3. Li, G., Ma, Y., Wang, W., Zhang, J., & Luo, H. (2024). The self-detection method of the puppet attack in biometric fingerprinting. *IEEE Internet of Things Journal, 11*(10).
+5. Relevant Datasets
 
-4. Ametefe, D. S., et al. (2024). Enhancing fingerprint authentication: A systematic review of liveness detection methods against presentation attacks. *Journal of The Institution of Engineers (India): Series B, 105*(5).
+LivDet (2017, 2019, 2023): Fingerprint liveness detection benchmark - PAD evaluation
+FVC (2000, 2002, 2004): Fingerprint verification competition - Recognition and authentication
+Puppet Attack Dataset (2024): 5,600 images, 70 volunteers - Puppet attack detection
+CASIA-FingerV5: Multimodal face-fingerprint dataset - Multimodal biometrics
+SOCOFing: Fingerprint dataset - Fingerprint recognition
 
-5. Yook, H. J., et al. (2024). Attention map is all we need for lightweight fingerprint liveness detection. *IEEE Access, 12*.
 
-6. Santos, N., Ghita, B., & Masala, G. L. (2024). Medical systems data security and biometric authentication in public cloud servers. *IEEE Transactions on Emerging Topics in Computing, 12*(2), 572–582.
+6. Evaluation Metrics Identified
 
-7. Adami, B., Hosseinzadehketilateh, M. R., & Karimian, N. (2024). Contactless fingerprint biometric anti-spoofing: An unsupervised deep learning approach. *2024 IEEE International Joint Conference on Biometrics (IJCB)*.
+Accuracy: Classification performance
+Precision: True positive rate
+Recall: Sensitivity
+F1-Score: Harmonic mean of precision and recall
+EER (Equal Error Rate): Biometric authentication
+FAR (False Acceptance Rate): Authentication systems
+FRR (False Rejection Rate): Authentication systems
+APCER (Attack Presentation Classification Error Rate): PAD evaluation
+BPCER (Bonafide Presentation Classification Error Rate): PAD evaluation
+ACER (Average Classification Error Rate): PAD evaluation
+
+
+7. References Supporting the Proposed Methodology
+
+1. Zhang, K., Huang, S., Liu, E., & Zhao, H. (2023). LFLDNet: Lightweight fingerprint liveness detection based on ResNet and transformer. Sensors, 23(15), 7842.
+
+2. Hussain, A., Murshed, F., Alandoli, M. N., & Aljafari, G. (2025). A hybrid deep learning approach for secure biometric authentication using fingerprint data. Computers, 14(5), 178.
+
+3. Li, G., Ma, Y., Wang, W., Zhang, J., & Luo, H. (2024). The self-detection method of the puppet attack in biometric fingerprinting. IEEE Internet of Things Journal, 11(10).
+
+4. Ametefe, D. S., et al. (2024). Enhancing fingerprint authentication: A systematic review of liveness detection methods against presentation attacks. Journal of The Institution of Engineers (India): Series B, 105(5).
+
+5. Yook, H. J., et al. (2024). Attention map is all we need for lightweight fingerprint liveness detection. IEEE Access, 12.
+
+6. Santos, N., Ghita, B., & Masala, G. L. (2024). Medical systems data security and biometric authentication in public cloud servers. IEEE Transactions on Emerging Topics in Computing, 12(2), 572–582.
+
+7. Adami, B., Hosseinzadehketilateh, M. R., & Karimian, N. (2024). Contactless fingerprint biometric anti-spoofing: An unsupervised deep learning approach. 2024 IEEE International Joint Conference on Biometrics (IJCB).
