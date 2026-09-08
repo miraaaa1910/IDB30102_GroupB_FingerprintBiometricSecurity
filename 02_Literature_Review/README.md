@@ -24,10 +24,9 @@
 
 | No. | Research Gap | Evidence | Implication |
 |---|---|---|---|
-| **1** | **Limited availability of puppet attack datasets** | Li et al. (2024) dataset contains only **5,600 images from 70 volunteers** and lacks sufficient demographic diversity | More diverse puppet attack datasets are required to improve model generalisation |
-| **2** | **Variations in puppet attack conditions** | Li et al. (2024) showed that models trained primarily on straight pressing can experience performance degradation under angled and side pressing conditions | The proposed system should consider different attack angles and pressing conditions |
-| **3** | **Limited cross-dataset and real-world evaluation** | Ametefe et al. (2024) reported that many studies rely on controlled benchmark datasets rather than real-world environments | Cross-dataset testing and real-world validation are needed |
-| **4** | **Balance between detection performance and computational efficiency** | Yook et al. (2024) and Santos et al. (2024) highlight the challenge of achieving high performance while maintaining computational efficiency | A lightweight model should be investigated without significantly reducing detection performance |
+| **1** | **Limited research specifically on puppet attacks** | Most fingerprint spoofing studies focus on fake materials such as silicone, gelatin, and latex. Puppet attacks receive less attention because the attack uses a genuine fingerprint from a live user. Li et al. (2024) introduced a Puppet Attack Dataset and achieved detection rates of **78.1%–97.2%**, but detection performance decreased significantly for angled and side pressing. | More research is needed to specifically investigate puppet attacks and distinguish voluntary and involuntary fingerprint authentication using genuine fingerprints. |
+| **2** | **Limited availability of puppet attack datasets** | Li et al. (2024) introduced a Puppet Attack Dataset containing **5,600 images from 70 volunteers**. However, the dataset has limited demographic diversity and does not sufficiently represent different user populations and attack conditions. | More diverse and representative puppet attack datasets are required to improve the reliability and generalisation of machine learning models. |
+| **3** | **Variations in puppet attack conditions** | Existing studies mainly investigate straight pressing conditions. Li et al. (2024) reported a detection rate of **97.2% for straight pressing**, which decreased to **86.5% for angled pressing** and **78.1% for side pressing**. | Future models should consider different pressing angles, finger positions, and attack behaviours to improve robustness in real-world conditions. |
 
 ---
 
