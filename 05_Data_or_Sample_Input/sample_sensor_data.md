@@ -1,8 +1,8 @@
 # **SAMPLE SENSOR DATA**
 
-# BM2166 Capacitive Fingerprint Module Profile
+## 1. BM2166 Capacitive Fingerprint Module Profile
 
-**Hardware & Connection**
+### Hardware & Connection
 
 | Item | Details |
 | :--- | :--- |
@@ -10,9 +10,7 @@
 | **Main Chip / Controller** | STM32F407ZET6 (ARM Cortex-M4) |
 | **Connection Type** | UART / USB Serial |
 
----
-
-**Image & Working Limits**
+### Image & Working Limits
 
 | Feature | Value |
 | :--- | :--- |
@@ -22,9 +20,7 @@
 | **Safe Temperature** | -20°C to +40°C |
 | **Safe Air Humidity** | 40% to 85% |
 
----
-
-**Touch Pressure & Angle (Normal vs. Forced)**
+### Touch Pressure & Angle (Normal vs. Forced)
 
 | Measurement | Value / Description |
 | :--- | :--- |
