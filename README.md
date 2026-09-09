@@ -28,5 +28,45 @@ To develop and evaluate a machine learning-based approach for detecting puppet a
 ## Evaluation Plan
 ## System Architecture
 ## Technical Component
-## Programming Languages
+| Item | Details |
+|---|---|
+| Programming language | Python |
+| IDE / Editor	| Visual Studio Code	|
+|Version Control	|Git & GitHub |
+|Image Processing	|OpenCV |
+|Feature Extraction	|scikit-image |
+| Machine Learning	|scikit-learn |
+|Numerical Processing|	NumPy	|
+|Data Serialization	|Python Pickle / JSON	|
+|Dataset	|Fingerprint dataset containing Genuine and Puppet attack samples |
+|Machine Learning Model|	Linear Support Vector Machine (LinearSVC) |
+|Development Environment|Python 3.x|
+
 ## Instruction for Executing Preliminary Code
+1. Install Python 3.x on the computer.
+2. Install the required libraries:
+   ````
+   pip install numpy opencv-python scikit-image scikit-learn
+   ````
+3. Place the fingerprint dataset inside the dataset/ folder using the required structure:
+   ````
+   dataset/
+   ├── Genuine/
+   │   ├── P001/
+   │   └── P002/
+   └── Puppet/
+    ├── P001/
+    └── P002/
+   ````
+
+4. Run the data loader to split the dataset:
+   ````
+   python data_loader.py
+5. Run the model training:
+   ````
+   python model_training.py
+6. Run the evaluation code:
+   ````
+   python model_evaluation.py
+
+The trained model and evaluation results will be saved in the outputs/ folder.
