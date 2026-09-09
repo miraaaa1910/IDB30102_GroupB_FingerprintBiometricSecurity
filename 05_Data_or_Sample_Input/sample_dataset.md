@@ -37,12 +37,7 @@
 
 ### Scenario Breakdown
 
-| Scenario ID | Scenario Name | Sample Count |
-|-------------|---------------|--------------|
-| S1 | All Unlock | 5600 |
-| S2 | Straight Unlock | 1400 |
-| S3 | 45 Degree Unlock | 1400 |
-| S4 | Side Unlock | 2800 |
+<img width="541" height="235" alt="image" src="https://github.com/user-attachments/assets/60d3672e-759a-4390-8e2b-111de1c63c17" />
 
 ## 2. LivDet 2017 Fingerprint Liveness Detection Competition 2017
 
