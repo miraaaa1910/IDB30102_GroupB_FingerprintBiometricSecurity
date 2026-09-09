@@ -32,8 +32,9 @@
 
 | Category | Sample Count |
 |----------|--------------|
-| **Bonafide (Genuine/Unforced)** | 5600 |
-| **Puppet Attack** | 5600 |
+| **Bonafide (Genuine/Unforced)**
+**Puppet Attack** | 5600 |
+
 
 ### Scenario Breakdown
 
