@@ -2,6 +2,6 @@
 
 ## Content
 
-### [Sample Image](sample_images.md)
+### [Sample Image](sample_images)
 
 ### [Sample Dataset](sample_dataset.md)
