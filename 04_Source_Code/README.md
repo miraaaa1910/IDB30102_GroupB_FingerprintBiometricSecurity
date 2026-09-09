@@ -111,7 +111,7 @@ python model_training.py
 python model_evaluation.py
 ````
 
-### Outputs
+## Outputs
 
 The following files will be generated in the outputs/ folder:
 
@@ -133,3 +133,11 @@ The evaluation includes:
 - BPCER
 - ACER
 - Confusion Matrix
+
+## References
+| Component | Source |
+|---|----|
+| Puppet attack code | https://github.com/Lynnon/The-Self-Detection-Method-of-the-Puppet-Attack-in-Biometric-Fingerprinting#1 |
+|LBP + SVM code| https://github.com/shreyas-dharanesh/Fingerprint-Spoof-Detector-Based-on-Local-Binary-Patterns#1 |
+|HOG-LBP code| https://github.com/water011/Human-Detection-HOG-LBP-Neural-Networks#1 |
+|LBPH + SVM code| https://github.com/abdur75648/Fingerprint-Spoof-Detection |
