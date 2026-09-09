@@ -30,7 +30,7 @@
 ### Scenario Breakdown
 
 | Scenario ID | Scenario Name | Sample Count |
-|------|-------------|
+|------|-------------| ---------- |
 | S1 | All Unlock | 5600 |
 | S2 | Straight Unlock | 1400 |
 | S3 | 45 Degree Unlock | 1400 |
