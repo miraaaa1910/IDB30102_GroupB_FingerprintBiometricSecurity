@@ -20,6 +20,14 @@
 | **Spatial Resolution** | 508 DPI |
 | **Color Depth** | Grayscale |
 
+### People and Testing Period
+
+| Group Info | Details |
+|------|-------------|
+| **Volunteers** | 70 people |
+| **Ages** | 20 to 75 years old |
+| **Collection Time** | 3 week |
+
 ### Class & Scenario Distribution
 
 | Category | Sample Count |
