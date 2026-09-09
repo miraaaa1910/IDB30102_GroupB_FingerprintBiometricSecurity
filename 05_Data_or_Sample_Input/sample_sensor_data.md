@@ -27,5 +27,5 @@
 | **Normal Touch Push Force** | 3.0 N (average) |
 | **Forced Touch Push Force** | 20.0 to 45.0 N |
 | **Normal Finger Angle** | 90.0° (straight down) |
-| **Forced Finger Angle** | 30.0° (slanted) |
+| **Forced Finger Angle** | 30.0° (diagonal) |
 | **High Pressure Spot** | Outer edges of the sensor during forced touch |
