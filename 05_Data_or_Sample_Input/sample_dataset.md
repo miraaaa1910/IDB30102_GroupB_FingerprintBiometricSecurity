@@ -19,3 +19,20 @@
 | **Physical Sensor Area** | 8 mm x 8 mm |
 | **Spatial Resolution** | 508 DPI |
 | **Color Depth** | Grayscale |
+
+### Class & Scenario Distribution
+
+| Category | Sample Count |
+|------|-------------|
+| **Bonafide (Genuine/Unforced)** | 5600 |
+| **Puppet Attack** | 5600 |
+
+### Scenario Breakdown
+
+| Scenario ID | Scenario Name | Sample Count |
+|------|-------------|
+| S1 | All Unlock | 5600 |
+| S2 | Straight Unlock | 1400 |
+| S3 | 45 Degree Unlock | 1400 |
+| S4 | Side Unlock | 2800 |
+
