@@ -115,10 +115,12 @@ python model_evaluation.py
 
 The following files will be generated in the outputs/ folder:
 
+````
 outputs/
 ├── dataset_splits.json
 ├── svm_lbp_hog_model.pkl
 └── evaluation_results.json
+````
 
 The evaluation includes:
 
