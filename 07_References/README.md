@@ -15,8 +15,3 @@ and biometric security.
 
 References and information for fingerprint datasets used in the project,
 including LivDet datasets.
-
-### [Technical Documentation](Technical_Documentation.md)
-
-Technical standards, specifications, and documentation relevant to the
-project, including biometric presentation attack detection standards.
