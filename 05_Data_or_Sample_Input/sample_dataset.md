@@ -1,7 +1,11 @@
 # **DATA OR SAMPLE INPUT**
 
-| **Dataset Name** | The Self-Detection Method of the Puppet Attack in Biometric Fingerpring |
+## 1. The Self-Detection Method of the Puppet Attack in Biometric Fingerpring
+
+| **Dataset Name** | *The Self-Detection Method of the Puppet Attack in Biometric Fingerpring* |
 |------|-------------|
 | **Modality** | Contact Capacitive Fingerprint |
+| **Capture Hardware** | BM2166 Capacitive Sensor + STM32F407ZET6 Microcontroller |
+| **** | 
 
-| **Dataset Name** | LivDet 2017 Fingerprint Liveness Benchmark |
+| **Class Distribution** | Scenario |
