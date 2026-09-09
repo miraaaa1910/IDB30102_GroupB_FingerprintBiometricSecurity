@@ -71,20 +71,6 @@ The dataset is split at the participant level:
 
 This prevents the same participant from appearing in different splits.
 
-## Method
-````text
-Fingerprint Images
-        ↓
-Preprocessing
-        ↓
-LBP + HOG Feature Extraction
-        ↓
-StandardScaler
-        ↓
-Linear SVM
-        ↓
-Model Evaluation
-````
 ## Requirements
 - Python 3
 - NumPy
