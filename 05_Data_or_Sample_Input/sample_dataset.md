@@ -20,21 +20,15 @@
 | **Spatial Resolution** | 508 DPI |
 | **Color Depth** | Grayscale |
 
-### People and Testing Period
+### Class & Scenario Distribution
 
-| Group Info | Details |
-|------------|---------|
+| Item | Details |
+|----------|--------------|
+| **Category** | Bonafide (Genuine/Unforced) & Puppet Attack |
+| **Count** | 5600 sample images |
 | **Volunteers** | 70 people |
 | **Ages** | 20 to 75 years old |
 | **Collection Time** | 3 week |
-
-### Class & Scenario Distribution
-
-| Category | Sample Count |
-|----------|--------------|
-| **Bonafide (Genuine/Unforced)**
-**Puppet Attack** | 5600 |
-
 
 ### Scenario Breakdown
 
