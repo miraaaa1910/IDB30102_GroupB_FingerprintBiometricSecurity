@@ -1,46 +1,50 @@
- FINGERPRINT PUPPET ATTACK DETECTION
- LBP + HOG Fusion Features with SVM
-======================================================================
+# Fingerprint Puppet Attack Detection
+## LBP + HOG Fusion Features with SVM
 
-[1] Loading dataset...
-    Total images: 5600
+### 1. Dataset Loading
 
-[2] Splitting dataset (70/10/20 at participant level)...
-==============================
-DATASET SPLIT
-==============================
-Training participants: 49
-Validation participants: 7
-Testing participants: 14
+- **Total images:** 5,600
 
-Training images: 3920
-Validation images: 560
-Testing images: 1120
+### 2. Dataset Splitting
 
-[3] Creating LBP + HOG feature extractor...
-[4] Extracting training features (LBP + HOG)...
-    Training samples: 3920
-    Feature vector size: 26270
+The dataset was split into **70/10/20** for training, validation, and testing at the participant level.
 
-[5] Extracting validation features (LBP + HOG)...
-    Validation samples: 560
+| Dataset | Participants | Images |
+|---|---:|---:|
+| Training | 49 | 3,920 |
+| Validation | 7 | 560 |
+| Testing | 14 | 1,120 |
+| **Total** | **70** | **5,600** |
 
-[6] Hyperparameter tuning (using validation set)...
---------------------------------------------------
-  C     Validation Accuracy
---------------------------------------------------
-   0.01  0.8571
-   0.1   0.8929
-   1.0   0.9107
-  10.0   0.9107
- 100.0   0.9107
---------------------------------------------------
-Best C: 1.0
-Best validation accuracy: 0.9107
+### 3. Feature Extraction
 
-[7] Retraining final model (training + validation data)...
+The model uses a combination of **Local Binary Pattern (LBP)** and **Histogram of Oriented Gradients (HOG)** features.
 
-Final model saved to: outputs/svm_lbp_hog_model.pkl
-======================================================================
- TRAINING COMPLETED SUCCESSFULLY
-======================================================================
+- **Feature extractor:** LBP + HOG
+- **Training samples:** 3,920
+- **Feature vector size:** 26,270
+- **Validation samples:** 560
+
+### 4. Hyperparameter Tuning
+
+The SVM model was tested with different values of **C** using the validation dataset.
+
+| C | Validation Accuracy |
+|---:|---:|
+| 0.01 | 0.8571 |
+| 0.1 | 0.8929 |
+| 1.0 | **0.9107** |
+| 10.0 | 0.9107 |
+| 100.0 | 0.9107 |
+
+**Best C:** 1.0  
+**Best Validation Accuracy:** 0.9107
+
+### 5. Final Model Training
+
+After selecting the best hyperparameter, the final SVM model was retrained using the **training and validation datasets**.
+
+**Model output:**
+
+```text
+outputs/svm_lbp_hog_model.pkl
