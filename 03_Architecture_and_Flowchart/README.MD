@@ -40,8 +40,6 @@
 
 
 
-
-
  Fingures 1 shows the overall architecture of the proposed puppet attack detection system. The system consists of four main modules:
 
 i.   The Data Collection Module
@@ -68,7 +66,9 @@ iv.  The Classification Module.
      - Evaluates the model using multiple performance metrics
 
 
-#  2 System Flow chart
+
+                   2 System Flow chart
+```text
 
                  2  Research Process Flow Chart
 
