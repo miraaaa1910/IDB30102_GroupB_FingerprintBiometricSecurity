@@ -42,7 +42,7 @@
 
 
 
-Figure 1 shows the overall architecture of the proposed puppet attack detection system. The system consists of four main modules:
+ ## 1 shows the overall architecture of the proposed puppet attack detection system. The system consists of four main modules:
 
 i.   The Data Collection Module
      - Collects Bonafide fingerprint samples from participants placing their own fingers normally
