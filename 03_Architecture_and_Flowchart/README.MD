@@ -68,7 +68,7 @@ iv.  The Classification Module.
      - Evaluates the model using multiple performance metrics
 
 
-# 1. Proposed Architecture Diagram
+#  2 System Flow chart
 
                  2  Research Process Flow Chart
 
