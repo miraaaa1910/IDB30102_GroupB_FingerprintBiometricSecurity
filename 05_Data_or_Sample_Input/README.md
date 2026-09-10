@@ -12,4 +12,6 @@
 
 ### [Sample Image](sample_images)
 
+### [Sample Input Format](sample_input_format.md)
+
 ### [Sample Sensor Data](sample_sensor_data.md)
