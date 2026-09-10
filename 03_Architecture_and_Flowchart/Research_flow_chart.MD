@@ -122,14 +122,3 @@ Figure 2 shows the proposed flow chart diagram. Below is a detailed explanation 
 
 
 
-
-
-
-
-# 2. System Flow Chart
-
-
-
-
-
-
