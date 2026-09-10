@@ -1,9 +1,3 @@
-# 6. Architecture and System Flow (`03_Architecture_and_Flowchart/`)
-
-This directory contains the system architecture and process flow specifications for the proposed **Puppet Attack Detection System** in fingerprint authentication. All components strictly follow the methodology outlined in Section 3.4.1 of the research proposal.
-
----
-
 ## 1. System Architecture Diagram
 
 ```text
