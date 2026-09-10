@@ -10,7 +10,6 @@ Detecting Puppet Attacks in Fingerprint Authentication using Machine Learning
 4. Muhammad Muzaffar Bin Abd Latif 52215226140
 5. Muhammad Amirul Shazwan Bin Hawari 52215226195
 
-## Assigned Research Area
 ## Research Problem
 1. Limited research on puppet attack detection because most research focuses on traditional presentation attacks.
 2. Limited datasets in terms of size and demographic diversity.
@@ -48,6 +47,7 @@ To develop and evaluate a machine learning-based approach for detecting puppet a
 |RO1| To develop a dataset containing genuine and puppet attack fingerprint samples for machine learning-based detection. | 01_Research_Papers/ and 02_Literature_Review/ |
 |RO2| To develop a machine learning model for classifying genuine fingerprint samples and puppet attack samples.| 03_Architecture_and_Flowchart/ and 04_Source_Code/ |
 |RO3| To evaluate the performance of the developed machine learning model using appropriate evaluation metrics such as  accuracy, precision, recall, F1-score, ROC-AUC, APCER, BPCER, and ACER. | 05_Data_or_Sample_Input/ and 06_Results_or_Expected_Output/|
+
 ## Instruction for Executing Preliminary Code
 1. Install Python 3.x on the computer.
 2. Install the required libraries:
