@@ -41,4 +41,4 @@
 |             5. Output: Bonafide or simulated puppet attack        |
 +-------------------------------------------------------------------+
 
-Figure 1 Proposed System Architecture for Puppet Attack Detection
+
