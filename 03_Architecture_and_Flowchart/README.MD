@@ -1,4 +1,4 @@
-## 1. System Architecture Diagram
+## 1. Proposed Architecture Diagram
 
 ```text
 ┌─────────────────────────────────────────────────────────────┐
@@ -68,10 +68,9 @@ iv.  The Classification Module.
      - Evaluates the model using multiple performance metrics
 
 
+# System Flowchart
 
-
-
-2 Research Process Flow Chart
+                 2  Research Process Flow Chart
 
                                 ( START )
                                     |
