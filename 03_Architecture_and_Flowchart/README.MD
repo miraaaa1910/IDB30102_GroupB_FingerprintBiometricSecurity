@@ -1,28 +1,50 @@
-# Architecture and System Flow
+┌────────────────────────────────────────────────────────────────────────┐
+│                        DATA COLLECTION MODULE                          │
+│                                                                        │
+│  1. Bonafide Samples (Direct, Angled, Side)                            │
+│  2. Simulated Puppet Attack Samples (Direct, Angled, Side)             │
+│  3. Supporting Datasets (LivDet2017 / LivDet2019 / LivDet2023)         │
+└───────────────────────────────────┬────────────────────────────────────┘
+                                    │
+                                    ▼
+┌────────────────────────────────────────────────────────────────────────┐
+│                         PREPROCESSING MODULE                           │
+│                                                                        │
+│  1. Image Enhancement (Histogram Equalization)                         │
+│  2. Noise Removal (Gaussian Filtering)                                 │
+│  3. Normalisation                                                      │
+│  4. Segmentation (Foreground Extraction)                               │
+└───────────────────────────────────┬────────────────────────────────────┘
+                                    │
+                                    ▼
+┌────────────────────────────────────────────────────────────────────────┐
+│                      FEATURE EXTRACTION MODULE                         │
+│                                                                        │
+│  1. LBP Feature Extraction (Local Texture)                             │
+│  2. HOG Feature Extraction (Edges / Gradients)                         │
+│  3. Feature Concatenation (Unified Vector)                             │
+└───────────────────────────────────┬────────────────────────────────────┘
+                                    │
+                                    ▼
+┌────────────────────────────────────────────────────────────────────────┐
+│                        CLASSIFICATION MODULE                           │
+│                                                                        │
+│  1. Data Splitting (70% Training, 10% Validation, 20% Testing)         │
+│  2. SVM Model Training (RBF Kernel)                                    │
+│  3. Hyperparameter Optimisation (Grid Search)                          │
+│  4. Model Evaluation (Accuracy, Precision, Recall, F1, ROC-AUC,        │
+│                        APCER, BPCER, ACER)                             │
+│  5. Output Classification: [ Bonafide ] or [ Simulated Puppet Attack ] │
+└────────────────────────────────────────────────────────────────────────┘
 
-This folder contains the system architecture diagrams, process flowcharts, and technical schemas developed for the fingerprint biometric security project.
 
-## Diagram Files
+## Proposed System Architecture
 
-| File / Diagram | Description |
-| :--- | :--- |
-| **system_architecture.png** | Illustrates the high-level system architecture across four integrated modules: Data Collection, Preprocessing, Feature Extraction, and Classification. |
-| **process_flowchart.png** | Maps the step-by-step methodology and experimental pipeline based on the CRISP-DM framework. |
-| **data_flow_diagram.png** | Outlines how raw fingerprint images move through preprocessing, feature fusion (LBP + HOG), and SVM classification. |
+![Proposed System Architecture](system_architecture.png)
 
----
-
- ## Proposed System Architecture
-
-The proposed system architecture for detecting puppet attacks consists of four integrated processing modules:
-
-1. **Data Collection Module:** Captures Bonafide samples (Direct, Angled, Side), Simulated Puppet Attack samples (Direct, Angled, Side), and supporting PAD benchmark datasets (LivDet2017, LivDet2019, LivDet2023).
-   
-3. **Preprocessing Module:** Handles image quality enhancement via histogram equalization, noise reduction using Gaussian filtering, intensity normalization, and foreground fingerprint region segmentation.
-   
-5. **Feature Extraction Module:** Extracts Local Binary Pattern (LBP) texture features and Histogram of Oriented Gradients (HOG) edge/gradient descriptors, followed by feature concatenation into a single unified feature vector.
-
-7. **Classification Module:** Performs data partitioning (70% training, 10% validation, 20% testing), trains a Support Vector Machine (SVM) classifier with an RBF kernel, optimizes hyperparameters using grid search, and outputs the final classification (*Bonafide* or *Simulated Puppet Attack*) alongside key performance metrics.
-
----
-
+### Description
+The proposed system architecture consists of four integrated modules designed to detect puppet attacks in fingerprint authentication:
+1. **Data Collection Module:** Captures Bonafide and Simulated Puppet Attack samples under three pressing conditions (Direct, Angled, Side), alongside supporting LivDet benchmark datasets.
+2. **Preprocessing Module:** Performs image quality enhancement, Gaussian noise reduction, intensity normalization, and fingerprint region segmentation.
+3. **Feature Extraction Module:** Extracts Local Binary Pattern (LBP) texture features and Histogram of Oriented Gradients (HOG) descriptors, concatenating them into a unified feature vector.
+4. **Classification Module:** Partitions data (70/10/20 split), trains a Support Vector Machine (SVM) classifier with an RBF kernel, optimizes hyperparameters via grid search, and outputs the final prediction (*Bonafide* vs. *Simulated Puppet Attack*) along with performance metrics.
