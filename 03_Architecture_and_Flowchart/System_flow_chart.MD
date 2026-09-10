@@ -45,9 +45,7 @@ Figure 1 Proposed System Architecture for Puppet Attack Detection
 
 
 ---
-
-
-## 3.4.2 System Flow Chart
+ .2 System Flow Chart
 
 ```text
                                +-------------------+
