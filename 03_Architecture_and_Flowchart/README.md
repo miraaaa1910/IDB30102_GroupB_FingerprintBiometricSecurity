@@ -1,25 +1,24 @@
+```markdown
 # Architecture and System Flow
 
-This folder contains the system architecture diagrams, process flowcharts, and technical schemas developed for the fingerprint biometric security project.
+This folder contains the architectural designs, process flows, and technical diagrams for the fingerprint biometric security project, consistent with Chapter 3 of the Research Proposal.
 
-## Diagram Files
+## Documentation Overview
 
-| File / Diagram | Description |
+| Section / Item | Description |
 | :--- | :--- |
-| **system_architecture.png** | Illustrates the high-level system architecture, showing interactions between the fingerprint sensor, processing unit, database, and user interface. |
-| **process_flowchart.png** | Maps the step-by-step logic workflow from fingerprint capture and feature extraction to matching and authentication. |
-| **data_flow_diagram.png** | Outlines how data moves through various processing stages (preprocessing, feature fusion, and classification). |
+| **Proposed System Architecture** | High-level system structure showing interactions between hardware sensors, software modules, and databases. |
+| **System Flowchart / Process Flow** | Step-by-step logic workflow mapping out the user authentication and verification process. |
+| **Proposed Framework** | Structural framework governing the biometric security model implementation. |
+| **Data Flow or Processing Stages** | Detailed stages illustrating how fingerprint data moves from raw capture through preprocessing, feature fusion, and classification. |
+| **Other Technical Diagrams** | Supplementary diagrams and technical schemas relevant to the proposed research. |
 
-## System Workflow
+## System Workflow Pipeline
 
-The architectural pipeline follows this sequence:
+Proposed System Architecture 
+  ↓
+System Flowchart / Process Flow
+  ↓
+Data Flow & Processing Stages
 
-Fingerprint Capture 
-  ↓
-Image Preprocessing (ROI Segmentation & Normalization)
-  ↓
-Feature Extraction (LBP & HOG Fusion)
-  ↓
-Model Matching / PAD Verification
-  ↓
-Authentication Result (Access Granted / Denied)
+```
