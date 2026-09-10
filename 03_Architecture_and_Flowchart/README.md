@@ -1,24 +1,25 @@
-```markdown
 # Architecture and System Flow
 
-This folder contains the architectural designs, process flows, and technical diagrams for the fingerprint biometric security project, consistent with Chapter 3 of the Research Proposal.
+This folder contains the system architecture diagrams, process flowcharts, and technical schemas developed for the fingerprint biometric security project.
 
-## Documentation Overview
+## Diagram Files
 
-| Section / Item | Description |
+| File / Diagram | Description |
 | :--- | :--- |
-| **Proposed System Architecture** | High-level system structure showing interactions between hardware sensors, software modules, and databases. |
-| **System Flowchart / Process Flow** | Step-by-step logic workflow mapping out the user authentication and verification process. |
-| **Proposed Framework** | Structural framework governing the biometric security model implementation. |
-| **Data Flow or Processing Stages** | Detailed stages illustrating how fingerprint data moves from raw capture through preprocessing, feature fusion, and classification. |
-| **Other Technical Diagrams** | Supplementary diagrams and technical schemas relevant to the proposed research. |
+| **system_architecture.png** | Illustrates the high-level system architecture, showing interactions between the fingerprint sensor, processing unit, database, and user interface. |
+| **process_flowchart.png** | Maps the step-by-step logic workflow from fingerprint capture and feature extraction to matching and authentication. |
+| **data_flow_diagram.png** | Outlines how data moves through various processing stages (preprocessing, feature fusion, and classification). |
 
-## System Workflow Pipeline
+## System Workflow
 
-Proposed System Architecture 
+The architectural pipeline follows this sequence:
+
+Fingerprint Capture 
   ↓
-System Flowchart / Process Flow
+Image Preprocessing (ROI Segmentation & Normalization)
   ↓
-Data Flow & Processing Stages
-
-```
+Feature Extraction (LBP & HOG Fusion)
+  ↓
+Model Matching / PAD Verification
+  ↓
+Authentication Result (Access Granted / Denied)
