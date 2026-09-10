@@ -15,17 +15,41 @@ Detecting Puppet Attacks in Fingerprint Authentication using Machine Learning
 2. Limited datasets in terms of size and demographic diversity.
    
 ## Research Aim
-To develop and evaluate a machine learning-based approach for detecting puppet attacks in fingerprint authentication systems, with the objective of improving the security and reliability of fingerprint-based authentication.
+To develop and evaluate a machine learning-based approach for detecting puppet attacks in fingerprint authentication systems with the objective of improving the security and reliability of fingerprint-based authentication.
 
 ## Research Objectives
 1. To develop a dataset containing genuine and puppet attack fingerprint samples for machine learning-based detection.
 2. To develop a machine learning model for classifying genuine fingerprint samples and puppet attack samples.
-3. To evaluate the performance of the developed machine learning model using appropriate evaluation metrics such as  accuracy, precision, recall, F1-score, ROC-AUC, APCER, BPCER, and ACER.
+3. To evaluate the performance of the developed machine learning model using appropriate evaluation metrics such as  accuracy, precision, recall, F1-score, ROC-AUC, APCER, BPCER and ACER.
 
 ## Proposed Solution
+* A machine learning-based approach is proposed to detect puppet attacks in fingerprint authentication systems
+* The solution targets security threats where a legitimate user is coerced to authenticate using their genuine fingerprint
+* It utilizes a Support Vector Machine (SVM) classifier combined with Local Binary Patterns (LBP) and Histogram of Oriented Gradients (HOG) feature extraction
+* The approach evaluates fingerprint samples across direct, angled and side pressing conditions
+
 ## Research Methodology & Development Model
+* The study adopts a quantitative experimental research design
+* It follows the 6-phase Cross-Industry Standard Process for Data Mining (CRISP-DM) model
+* Business Understanding defines the research problem, objectives, and security risks of puppet attacks
+* Data Understanding identifies and collects bonafide samples, simulated puppet attacks, and supporting LivDet datasets
+* Data Preparation cleans, normalizes, segments fingerprint images, and extracts LBP and HOG features
+* Modelling involves selecting, training, and optimizing an SVM classifier to differentiate normal authentication from puppet attacks
+* Evaluation assesses model performance using classification and PAD metrics
+* Deployment/Prototype demonstrates the detection mechanism as an additional security layer for fingerprint authentication
+
 ## Evaluation Plan
+* The detection model is treated as a binary classification problem predicting either Bonafide or Simulated Puppet Attack
+* Evaluation is performed using a separate test set
+* Standard classification metrics include accuracy, precision, recall, F1-score, and ROC-AUC
+* PAD-specific metrics include APCER, BPCER, and ACER to measure error rates
+
 ## System Architecture
+* **Data Collection Module**: Gathers bonafide samples, simulated puppet attack samples across direct, angled, and side pressing conditions, and LivDet datasets
+* **Preprocessing Module**: Performs image enhancement, Gaussian noise removal, normalization, and background segmentation
+* **Feature Extraction Module**: Extracts LBP local texture features and HOG edge/gradient features, combining them into a unified feature vector
+* **Classification Module**: Splits data into 70% training, 10% validation, and 20% testing sets, trains an SVM classifier with an RBF kernel via grid search optimization, and outputs the final classification
+
 ## Technical Component
 | Item | Details |
 |---|---|
