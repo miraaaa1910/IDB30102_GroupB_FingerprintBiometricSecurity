@@ -1,37 +1,102 @@
-## 1. System Architecture Diagram
+# 3.4 Architecture Diagram & Flow Chart
+
+## 3.4.1 System Architecture Diagram
+
++-----------------------------------------------------------------------------------+
+|                              DATA COLLECTION MODULE                               |
+|                                                                                   |
+|                   1. Bonafide samples (Direct/ Angled/ Side)                      |
+|             2. Simulated puppet attack samples (Direct/ Angled/ Side)             |
+|                  3. Supporting datasets (LivDet2017/ 2019/ 2023)                 |
++-----------------------------------------------------------------------------------+
+                                          |
+                                          v
++-----------------------------------------------------------------------------------+
+|                               PREPROCESSING MODULE                                |
+|                                                                                   |
+|                              1. Image enhancement                                 |
+|                                2. Noise removal                                   |
+|                                3. Normalisation                                   |
+|                                4. Segmentation                                    |
++-----------------------------------------------------------------------------------+
+                                          |
+                                          v
++-----------------------------------------------------------------------------------+
+|                             FEATURE EXTRACTION MODULE                             |
+|                                                                                   |
+|                             1. LBP feature extraction                             |
+|                             2. HOG feature extraction                             |
+|                             3. Feature concatenation                              |
++-----------------------------------------------------------------------------------+
+                                          |
+                                          v
++-----------------------------------------------------------------------------------+
+|                               CLASSIFICATION MODULE                               |
+|                                                                                   |
+|          1. Data splitting (70% training, 10% validation & 20% testing)           |
+|                          2. SVM model training (RBF kernel)                       |
+|                     3. Hyperparameter optimisation (grid search)                  |
+|             4. Model evaluation (accuracy, precision, recall, F1-score,           |
+|                              ROC - AUC, APCER, BPCER, ACER)                       |
+|                    5. Output: Bonafide or simulated puppet attack                 |
++-----------------------------------------------------------------------------------+
+
+Figure 1 Proposed System Architecture for Puppet Attack Detection
+
+
+---
+
+
+## 3.4.2 System Flow Chart
 
 ```text
-┌─────────────────────────────────────────────────────────────┐
-│                   DATA COLLECTION MODULE                    │
-│  1. Bonafide samples (Direct / Angled / Side)               │
-│  2. Simulated puppet attack samples (Direct / Angled / Side)│
-│  3. Supporting datasets (LivDet2017 / 2019 / 2023)          │
-└──────────────────────────────┬──────────────────────────────┘
-                               │
-                               ▼
-┌─────────────────────────────────────────────────────────────┐
-│                    PREPROCESSING MODULE                     │
-│  1. Image enhancement                                       │
-│  2. Noise removal                                           │
-│  3. Normalisation                                           │
-│  4. Segmentation                                            │
-└──────────────────────────────┬──────────────────────────────┘
-                               │
-                               ▼
-┌─────────────────────────────────────────────────────────────┐
-│                  FEATURE EXTRACTION MODULE                  │
-│  1. LBP feature extraction                                  │
-│  2. HOG feature extraction                                  │
-│  3. Feature concatenation                                   │
-└──────────────────────────────┬──────────────────────────────┘
-                               │
-                               ▼
-┌─────────────────────────────────────────────────────────────┐
-│                     CLASSIFICATION MODULE                   │
-│  1. Data splitting (70% training, 10% validation & 20% test)│
-│  2. SVM model training (RBF kernel)                         │
-│  3. Hyperparameter optimisation (grid search)               │
-│  4. Model evaluation (accuracy, precision, recall, F1-score,│
-│     ROC-AUC, APCER, BPCER, ACER)                            │
-│  5. Output: Bonafide or simulated puppet attack             │
-└─────────────────────────────────────────────────────────────┘
+                               +-------------------+
+                               |       START       |
+                               +---------+---------+
+                                         |
+                                         v
+                               +-------------------+
+                               |  Data Collection  |
+                               |      Module       |
+                               +---------+---------+
+                                         |
+                                         v
+                               +-------------------+
+                               |   Preprocessing   |
+                               |      Module       |
+                               +---------+---------+
+                                         |
+                                         v
+                               +-------------------+
+                               | Feature Extraction|
+                               |      Module       |
+                               +---------+---------+
+                                         |
+                                         v
+                               +-------------------+
+                               |   Classification  |
+                               |      Module       |
+                               +---------+---------+
+                                         |
+                                         v
+                                /-----------------\
+                               /   Classification  \
+                              <       Result        >
+                               \                   /
+                                \--------+--------/
+                                         |
+                               +---------+---------+
+                               |                   |
+                      BONAFIDE |                   | PUPPET ATTACK
+                               v                   v
+                     +-------------------+  +-------------------+
+                     | Output: Bonafide  |  | Output: Simulated |
+                     |                   |  | Puppet Attack     |
+                     +---------+---------+  +---------+---------+
+                               |                   |
+                               +---------+---------+
+                                         |
+                                         v
+                               +-------------------+
+                               |        END        |
+                               +-------------------+
