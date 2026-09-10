@@ -1,50 +1,22 @@
-┌────────────────────────────────────────────────────────────────────────┐
-│                        DATA COLLECTION MODULE                          │
-│                                                                        │
-│  1. Bonafide Samples (Direct, Angled, Side)                            │
-│  2. Simulated Puppet Attack Samples (Direct, Angled, Side)             │
-│  3. Supporting Datasets (LivDet2017 / LivDet2019 / LivDet2023)         │
-└───────────────────────────────────┬────────────────────────────────────┘
-                                    │
-                                    ▼
-┌────────────────────────────────────────────────────────────────────────┐
-│                         PREPROCESSING MODULE                           │
-│                                                                        │
-│  1. Image Enhancement (Histogram Equalization)                         │
-│  2. Noise Removal (Gaussian Filtering)                                 │
-│  3. Normalisation                                                      │
-│  4. Segmentation (Foreground Extraction)                               │
-└───────────────────────────────────┬────────────────────────────────────┘
-                                    │
-                                    ▼
-┌────────────────────────────────────────────────────────────────────────┐
-│                      FEATURE EXTRACTION MODULE                         │
-│                                                                        │
-│  1. LBP Feature Extraction (Local Texture)                             │
-│  2. HOG Feature Extraction (Edges / Gradients)                         │
-│  3. Feature Concatenation (Unified Vector)                             │
-└───────────────────────────────────┬────────────────────────────────────┘
-                                    │
-                                    ▼
-┌────────────────────────────────────────────────────────────────────────┐
-│                        CLASSIFICATION MODULE                           │
-│                                                                        │
-│  1. Data Splitting (70% Training, 10% Validation, 20% Testing)         │
-│  2. SVM Model Training (RBF Kernel)                                    │
-│  3. Hyperparameter Optimisation (Grid Search)                          │
-│  4. Model Evaluation (Accuracy, Precision, Recall, F1, ROC-AUC,        │
-│                        APCER, BPCER, ACER)                             │
-│  5. Output Classification: [ Bonafide ] or [ Simulated Puppet Attack ] │
-└────────────────────────────────────────────────────────────────────────┘
+flowchart TD
+    classDef phase fill:#2b2d42,stroke:#8d99ae,stroke-width:2px,color:#fff;
 
+    P1["<b>Phase 1: Business Understanding</b><br/>Define research problem & formulate objectives"] ::: phase
+    
+    P2["<b>Phase 2: Data Understanding</b><br/>Identify, collect, explore, and verify Bonafide &<br/>Simulated Puppet Attack data across pressing angles"] ::: phase
+    
+    P3["<b>Phase 3: Data Preparation</b><br/>Image preprocessing, LBP + HOG feature extraction,<br/>& train/validation/test split with subject separation"] ::: phase
+    
+    P4["<b>Phase 4: Modelling</b><br/>Train & tune RBF-SVM classifier using training<br/>and validation sets"] ::: phase
+    
+    P5["<b>Phase 5: Evaluation</b><br/>Assess final model performance on test set using<br/>standard & PAD-specific metrics"] ::: phase
+    
+    P6["<b>Phase 6: Deployment / Prototype</b><br/>Develop functional prototype to demonstrate real-time<br/>puppet attack detection & complete documentation"] ::: phase
 
-## Proposed System Architecture
-
-![Proposed System Architecture](system_architecture.png)
-
-### Description
-The proposed system architecture consists of four integrated modules designed to detect puppet attacks in fingerprint authentication:
-1. **Data Collection Module:** Captures Bonafide and Simulated Puppet Attack samples under three pressing conditions (Direct, Angled, Side), alongside supporting LivDet benchmark datasets.
-2. **Preprocessing Module:** Performs image quality enhancement, Gaussian noise reduction, intensity normalization, and fingerprint region segmentation.
-3. **Feature Extraction Module:** Extracts Local Binary Pattern (LBP) texture features and Histogram of Oriented Gradients (HOG) descriptors, concatenating them into a unified feature vector.
-4. **Classification Module:** Partitions data (70/10/20 split), trains a Support Vector Machine (SVM) classifier with an RBF kernel, optimizes hyperparameters via grid search, and outputs the final prediction (*Bonafide* vs. *Simulated Puppet Attack*) along with performance metrics.
+    P1 --> P2
+    P2 --> P3
+    P3 --> P4
+    P4 -- "If poor performance<br/>(re-tune model)" --> P4
+    P4 --> P5
+    P5 -- "If data/feature issues<br/>(re-preprocess & engineer)" --> P3
+    P5 --> P6
