@@ -16,6 +16,4 @@ This directory contains the system architecture diagrams, operational flowcharts
 
 ---
 
-## 2. Proposed System Architecture
 
-The proposed system architecture for detecting puppet attacks consists of four integrated processing modules[cite: 2]:
