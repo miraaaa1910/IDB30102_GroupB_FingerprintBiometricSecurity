@@ -1,0 +1,42 @@
+{
+  "dataset_metadata": {
+    "target_resolution_pixels": [160, 160],
+    "dpi": 508,
+    "sensor_model": "BM2166",
+    "color_mode": "Grayscale_8bit"
+  },
+  "samples": [
+    {
+      "sample_id": "S2_01_N_001",
+      "image_path": "data/raw/scenario_s2/normal/subject_01_normal_001.bmp",
+      "label": 0,
+      "class_name": "Bonafide",
+      "scenario": "S2_Straight_Unlock",
+      "pressing_angle_degrees": 90
+    },
+    {
+      "sample_id": "S2_01_A_001",
+      "image_path": "data/raw/scenario_s2/forced/subject_01_forced_001.bmp",
+      "label": 1,
+      "class_name": "Simulated_Puppet_Attack",
+      "scenario": "S2_Straight_Unlock",
+      "pressing_angle_degrees": 90
+    },
+    {
+      "sample_id": "S3_02_A_015",
+      "image_path": "data/raw/scenario_s3/forced/subject_02_forced_015.bmp",
+      "label": 1,
+      "class_name": "Simulated_Puppet_Attack",
+      "scenario": "S3_45Degree_Unlock",
+      "pressing_angle_degrees": 45
+    },
+    {
+      "sample_id": "S4_03_A_028",
+      "image_path": "data/raw/scenario_s4/forced/subject_03_forced_028.bmp",
+      "label": 1,
+      "class_name": "Simulated_Puppet_Attack",
+      "scenario": "S4_Side_Unlock",
+      "pressing_angle_degrees": "side"
+    }
+  ]
+}
