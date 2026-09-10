@@ -1,20 +1,19 @@
-graph TD
-    classDef moduleStyle fill:#b0c4de,stroke:#2b4c7e,stroke-width:2px,color:#000,font-weight:bold,align:left;
+@startuml
+skinparam rectangle {
+    BackgroundColor #B0C4DE
+    BorderColor #2B4C7E
+    FontColor #000000
+}
 
-    subgraph System_Architecture ["3.4.1 System Architecture Diagram"]
-        direction TD
+rectangle "<b>DATA COLLECTION MODULE</b>\n\n1. Bonafide samples (Direct/ Angled/ Side)\n2. Simulated puppet attack samples (Direct/ Angled/ Side)\n3. Supporting datasets (LivDet2017/ 2019/ 2023)" as Module1
 
-        A["<b>DATA COLLECTION MODULE</b><br/><br/>1. Bonafide samples (Direct/ Angled/ Side)<br/>2. Simulated puppet attack samples (Direct/ Angled/ Side)<br/>3. Supporting datasets (LivDet2017/ 2019/ 2023)"]
-        
-        B["<b>PREPROCESSING MODULE</b><br/><br/>1. Image enhancement<br/>2. Noise removal<br/>3. Normalisation<br/>4. Segmentation"]
-        
-        C["<b>FEATURE EXTRACTION MODULE</b><br/><br/>1. LBP feature extraction<br/>2. HOG feature extraction<br/>3. Feature concatenation"]
-        
-        D["<b>CLASSIFICATION MODULE</b><br/><br/>1. Data splitting (70% training, 10% validation & 20% testing)<br/>2. SVM model training (RBF kernel)<br/>3. Hyperparameter optimisation (grid search)<br/>4. Model evaluation (accuracy, precision, recall, F1-score,<br/>ROC - AUC, APCER, BPCER, ACER)<br/>5. Output: Bonafide or simulated puppet attack"]
+rectangle "<b>PREPROCESSING MODULE</b>\n\n1. Image enhancement\n2. Noise removal\n3. Normalisation\n4. Segmentation" as Module2
 
-        A --> B
-        B --> C
-        C --> D
-    end
+rectangle "<b>FEATURE EXTRACTION MODULE</b>\n\n1. LBP feature extraction\n2. HOG feature extraction\n3. Feature concatenation" as Module3
 
-    class A,B,C,D moduleStyle;
+rectangle "<b>CLASSIFICATION MODULE</b>\n\n1. Data splitting (70% training, 10% validation & 20% testing)\n2. SVM model training (RBF kernel)\n3. Hyperparameter optimisation (grid search)\n4. Model evaluation (accuracy, precision, recall, F1-score, ROC-AUC, APCER, BPCER, ACER)\n5. Output: Bonafide or simulated puppet attack" as Module4
+
+Module1 --> Module2
+Module2 --> Module3
+Module3 --> Module4
+@enduml
