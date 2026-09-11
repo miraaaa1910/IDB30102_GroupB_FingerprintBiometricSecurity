@@ -1,4 +1,4 @@
-# Proposed Architecture Diagram
+# 1Proposed Architecture Diagram
 
 ```text
                   ┌─────────────────────────────────────────────────────────────┐
