@@ -36,9 +36,7 @@
                   │  5. Output: Bonafide or simulated puppet attack             │
                   └─────────────────────────────────────────────────────────────┘
 
-
-
-
+```
 
  Fingures 1 shows the overall architecture of the proposed puppet attack detection system. The system consists of four main modules:
 
