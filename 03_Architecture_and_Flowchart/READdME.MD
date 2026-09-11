@@ -1,4 +1,6 @@
-# 1. Proposed Architecture Diagram
+### 1. Proposed Architecture Diagram
+
+```text
 +-------------------------------------------------------------+
 |                    DATA COLLECTION MODULE                   |
 | 1. Bonafide samples (Direct / Angled / Side)                |
@@ -33,6 +35,8 @@
 |    ROC-AUC, APCER, BPCER, ACER)                             |
 | 5. Output: Bonafide or simulated puppet attack              |
 +-------------------------------------------------------------+
+
+
 
 
 
