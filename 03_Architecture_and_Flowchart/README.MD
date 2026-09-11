@@ -1,4 +1,4 @@
-# 4. Data Flow
+# 3. Proposed Framework
 
 1. **Business Understanding:** Defines the security threat posed by puppet attacks in fingerprint biometrics and sets target performance criteria for distinguishing genuine interaction from forced finger placement.
 2. **Data Understanding:** Assesses dataset characteristics, image quality variations, and class distributions across custom collected samples and benchmark datasets (LivDet2017, LivDet2019, LivDet2023).
@@ -9,7 +9,7 @@
 
 ---
 
-### 3.5 Data Collection & Procedures
+###  Data Collection & Procedures
 
 This research will use existing fingerprint datasets together with a small custom dataset. LivDet2017, LivDet2019 and LivDet2023 will be used as supporting fingerprint PAD data. However, Li et al. (2024) reported that existing datasets do not contain enough forced fingerprint samples for studying puppet attacks. Therefore, a custom dataset will be prepared based on the forced and unforced conditions used in their study.
 
@@ -22,4 +22,5 @@ The custom dataset will contain two proposed classes: Bonafide and Simulated Pup
 | **Bonafide** | User places own finger normally | Normal authentication |
 | **Simulated puppet attack** | Finger placed under forced conditions | Simulated puppet attack |
 | **Existing dataset** | LivDet fingerprint samples | Supporting PAD data |
+
 
