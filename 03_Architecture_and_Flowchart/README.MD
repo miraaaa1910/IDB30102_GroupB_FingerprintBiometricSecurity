@@ -77,3 +77,30 @@ Figure 2 shows the proposed flow chart diagram. Below is a detailed explanation 
 5. **Preprocess fingerprint images**
    - Apply histogram equalization to improve image contrast.
    - Apply Gaussian filtering to reduce sensor noise.
+   - Normalize images to maintain consistent brightness and contrast.
+   - Segment the fingerprint region from the background.
+
+6. **Feature extraction**
+   - Extract LBP features to capture local texture patterns using a radius of 1 and 8 neighbours.
+   - Extract HOG features to capture edge and gradient information.
+   - Combine the LBP and HOG features into a single feature vector.
+   - Normalize the combined feature vectors for consistent scaling.
+
+7. **Data splitting**
+   - Divide the dataset into training (70%), validation (10%), and testing (20%) sets.
+   - Ensure that samples from the same participant are kept within the same split to prevent data leakage.
+   - Maintain a similar class distribution across the three sets.
+
+8. **Model development**
+   - Train an SVM classifier with an RBF kernel using the training set.
+   - Perform grid search with 5-fold cross-validation to optimize the C and gamma parameters.
+   - Use the validation set to assess the model during development and select the best-performing configuration.
+
+9. **Model evaluation**
+   - Evaluate the final model using the separate testing set.
+   - Calculate classification metrics including Accuracy, Precision, Recall, F1-score, and ROC-AUC.
+   - Calculate PAD-specific metrics including APCER, BPCER, and ACER.
+   - Compare the obtained results with the expected performance of the baseline model.
+
+10. **Prototype development and documentation**
+    - Develop a functional prototype to demonstrate the detection capability.
