@@ -4,7 +4,7 @@
                                                                                                                           
                               Research Process Flow Chart
                                                                                                                             
-                        ```text ( START )
+                           ( START )
                               |
                               v
                               +-----------------------------------------------+
