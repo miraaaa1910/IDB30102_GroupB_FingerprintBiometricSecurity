@@ -1,4 +1,4 @@
- #2  Research Flow Chart
+ #2 Research Flow Chart
 
                     +-------------------------------------------------------------+
                     |                            START                            |
