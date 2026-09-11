@@ -123,19 +123,3 @@ Figure 2 shows the proposed flow chart diagram. Below is a detailed explanation 
 
 
 
-
-### 3.3 Proposed Framework
-
-This research adopts the **CRISP-DM (Cross-Industry Standard Process for Data Mining)** methodology as the primary conceptual framework to structure the development and evaluation of the puppet attack detection system. The methodology consists of six iterative phases tailored specifically for biometric security machine learning workflows:
-
-1. **Business Understanding:** Defines the security risks associated with puppet attacks in fingerprint authentication systems and establishes clear performance benchmarks for attack detection.
-2. **Data Understanding:** Analyzes image quality, ridge patterns, and class distributions across custom collected samples and standard LivDet benchmarks (LivDet2017, 2019, 2023).
-3. **Data Preparation:** Preprocesses fingerprint scans using histogram equalization, Gaussian noise filtering, normalization, and ROI segmentation.
-4. **Modeling:** Extracts LBP and HOG feature vectors and trains a Support Vector Machine (SVM) classifier with a Radial Basis Function (RBF) kernel.
-5. **Evaluation:** Assesses model efficacy using metrics including Accuracy, Precision, Recall, F1-Score, ROC-AUC, APCER, BPCER, and ACER.
-6. **Deployment:** Constructs a functional prototype system and documents system architecture and process execution flows for operational integration.
-
-
-
-
-
