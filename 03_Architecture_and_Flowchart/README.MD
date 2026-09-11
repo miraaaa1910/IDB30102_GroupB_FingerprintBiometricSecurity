@@ -48,3 +48,32 @@
                     +-------------------------------------------------------------+
                     |                             END                             |
                    +-------------------------------------------------------------+
+
+
+Figure 2 shows the proposed flow chart diagram. Below is a detailed explanation of each step in the research flow chart:
+
+1. **Define research problem**
+   - Identify puppet attacks as a security vulnerability in fingerprint authentication.
+   - Recognise that conventional liveness detection may not detect puppet attacks because the fingerprint itself is genuine.
+   - Establish the need for a machine learning-based detection approach.
+
+2. **Define research objectives**
+   - Develop a dataset containing Bonafide and Simulated Puppet Attack samples.
+   - Develop a machine learning model to classify the fingerprint samples.
+   - Evaluate the model performance using appropriate evaluation metrics.
+
+3. **Identify and collect data sources**
+   - Collect custom Bonafide samples using normal finger placement.
+   - Collect custom Simulated Puppet Attack samples using assisted or forced finger placement.
+   - Include three pressing conditions: direct, angled, and side pressing.
+   - Include supporting PAD datasets from LivDet2017, LivDet2019, and LivDet2023.
+
+4. **Explore and verify data quality**
+   - Analyse the quality of the collected fingerprint images.
+   - Check variations in fingerprint ridge patterns and image quality.
+   - Check the balance between Bonafide and Simulated Puppet Attack classes.
+   - Ensure sufficient participant diversity.
+
+5. **Preprocess fingerprint images**
+   - Apply histogram equalization to improve image contrast.
+   - Apply Gaussian filtering to reduce sensor noise.
