@@ -40,4 +40,4 @@ The model will be evaluated using a separate test set. Accuracy, precision, reca
 | **BPCER** | Measures the error of incorrectly rejecting bona fide samples |
 | **ACER** | Provides the average of APCER and BPCER |
 
-*Table 2 Proposed Evaluation Metrics*
+
