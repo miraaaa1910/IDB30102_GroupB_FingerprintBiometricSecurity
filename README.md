@@ -31,10 +31,10 @@ To develop and evaluate a machine learning-based approach for detecting puppet a
 ## Research Methodology & Development Model
 * The study adopts a quantitative experimental research design
 * It follows the 6-phase Cross-Industry Standard Process for Data Mining (CRISP-DM) model
-* Business Understanding defines the research problem, objectives, and security risks of puppet attacks
-* Data Understanding identifies and collects bonafide samples, simulated puppet attacks, and supporting LivDet datasets
-* Data Preparation cleans, normalizes, segments fingerprint images, and extracts LBP and HOG features
-* Modelling involves selecting, training, and optimizing an SVM classifier to differentiate normal authentication from puppet attacks
+* Business Understanding defines the research problem, objectives and security risks of puppet attacks
+* Data Understanding identifies and collects bonafide samples, simulated puppet attacks and supporting LivDet datasets
+* Data Preparation cleans, normalizes, segments fingerprint images and extracts LBP and HOG features
+* Modelling involves selecting, training and optimizing an SVM classifier to differentiate normal authentication from puppet attacks
 * Evaluation assesses model performance using classification and PAD metrics
 * Deployment/Prototype demonstrates the detection mechanism as an additional security layer for fingerprint authentication
 
@@ -42,7 +42,7 @@ To develop and evaluate a machine learning-based approach for detecting puppet a
 * The detection model is treated as a binary classification problem predicting either Bonafide or Simulated Puppet Attack
 * Evaluation is performed using a separate test set
 * Standard classification metrics include accuracy, precision, recall, F1-score, and ROC-AUC
-* PAD-specific metrics include APCER, BPCER, and ACER to measure error rates
+* PAD-specific metrics include APCER, BPCER and ACER to measure error rates
 
 ## System Architecture
 * **Data Collection Module**: Gathers bonafide samples, simulated puppet attack samples across direct, angled, and side pressing conditions, and LivDet datasets
