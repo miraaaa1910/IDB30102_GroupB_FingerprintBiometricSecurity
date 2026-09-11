@@ -106,3 +106,5 @@ Figure 2 shows the proposed flow chart diagram. Below is a detailed explanation 
 
 10. **Prototype development and documentation**
     - Develop a functional prototype to demonstrate the detection capability.
+    - Document the research methodology, results, limitations, and recommendations.
+    - Prepare the final research report.
