@@ -52,15 +52,15 @@ Figure 1 shows the overall architecture of the proposed puppet attack detection 
 - Segments the fingerprint region from the background
 
 ## 3. The Feature Extraction Module
-     - Extracts LBP features to capture local texture patterns
-     - Extracts HOG features to capture edge and information
-     - Combines LBP and HOG features into a single feature vector for classification
+- Extracts LBP features to capture local texture patterns
+- Extracts HOG features to capture edge and information
+- Combines LBP and HOG features into a single feature vector for classification
 
 ## 4. The Classification Module.
-    - Splits the dataset into training (70%), validation (10%) and testing (20%)
-    - Trains a SVM classifier using RBF kernel
-    - Performs hyperparameter optimization using grid search with cross-validation
-    - Evaluates the model using multiple performance metrics
+- Splits the dataset into training (70%), validation (10%) and testing (20%)
+- Trains a SVM classifier using RBF kernel
+- Performs hyperparameter optimization using grid search with cross-validation
+- Evaluates the model using multiple performance metrics
 
 # 2. Research Proses flow Chart
 
