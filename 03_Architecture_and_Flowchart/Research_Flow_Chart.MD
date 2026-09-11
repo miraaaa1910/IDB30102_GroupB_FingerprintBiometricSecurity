@@ -23,4 +23,21 @@ The custom dataset will contain two proposed classes: Bonafide and Simulated Pup
 | **Simulated puppet attack** | Finger placed under forced conditions | Simulated puppet attack |
 | **Existing dataset** | LivDet fingerprint samples | Supporting PAD data |
 
+## Proposed Evaluation Plan
 
+The proposed system will be treated as a binary classification problem, where the model predicts either Bonafide or Simulated Puppet Attack. An SVM will be used as the baseline model because Li et al. (2024) used SVM with LBP-HOG features to distinguish forced and unforced fingerprints. Their results showed that LBP-HOG with an SVM could effectively distinguish the two conditions.
+
+The model will be evaluated using a separate test set. Accuracy, precision, recall, F1-score and ROC-AUC will be used to measure classification performance. APCER, BPCER and ACER will also be considered as PAD-specific metrics.
+
+| Metric | Purpose |
+| :--- | :--- |
+| **Accuracy** | Measures the overall percentage of correct predictions |
+| **Precision** | Measures how many detected attacks are actually attacks |
+| **Recall** | Measures how many actual attacks are successfully detected |
+| **F1-score** | Provides a balance between precision and recall |
+| **ROC-AUC** | Measures the model's ability to separate the two classes |
+| **APCER** | Measures the error of incorrectly accepting attack samples |
+| **BPCER** | Measures the error of incorrectly rejecting bona fide samples |
+| **ACER** | Provides the average of APCER and BPCER |
+
+*Table 2 Proposed Evaluation Metrics*
