@@ -23,5 +23,4 @@ The custom dataset will contain two proposed classes: Bonafide and Simulated Pup
 | **Simulated puppet attack** | Finger placed under forced conditions | Simulated puppet attack |
 | **Existing dataset** | LivDet fingerprint samples | Supporting PAD data |
 
-*Table 1 Proposed Data Collection Plan*
 
