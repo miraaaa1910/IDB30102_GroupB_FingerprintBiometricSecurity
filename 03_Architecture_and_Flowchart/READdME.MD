@@ -1,12 +1,12 @@
 # 1. Proposed Architecture Diagram
 
-```text╭─────────────────────────────────────────────────────────────────────────────╮
-│                           DATA COLLECTION MODULE                            │
-│ 1. Bonafide samples (Direct / Angled / Side)                                │
-│ 2. Simulated puppet attack samples (Direct / Angled / Side)                 │
-│ 3. Supporting datasets (LivDet2017 / 2019 / 2023)                            │
-╰─────────────────────────────────────────────────────────────────────────────╯
-                                       │
+    ╭─────────────────────────────────────────────────────────────────────────────╮
+    │                           DATA COLLECTION MODULE                            │
+    │ 1. Bonafide samples (Direct / Angled / Side)                                │
+    │ 2. Simulated puppet attack samples (Direct / Angled / Side)                 │
+    │ 3. Supporting datasets (LivDet2017 / 2019 / 2023)                            │
+    ╰─────────────────────────────────────────────────────────────────────────────╯
+                                           │
                                        ▼
 ╭─────────────────────────────────────────────────────────────────────────────╮
 │                            PREPROCESSING MODULE                             │
