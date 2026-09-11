@@ -1,4 +1,4 @@
- # 1. Proposed Architecture Diagram
+ # 1. Research Proses flow Chart
 
                     +-------------------------------------------------------------+
                     |                            START                            |
