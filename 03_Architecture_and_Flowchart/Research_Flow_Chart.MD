@@ -9,7 +9,7 @@
 
 ---
 
-###  Data Collection & Procedures
+### Data Collection & Procedures
 
 This research will use existing fingerprint datasets together with a small custom dataset. LivDet2017, LivDet2019 and LivDet2023 will be used as supporting fingerprint PAD data. However, Li et al. (2024) reported that existing datasets do not contain enough forced fingerprint samples for studying puppet attacks. Therefore, a custom dataset will be prepared based on the forced and unforced conditions used in their study.
 
