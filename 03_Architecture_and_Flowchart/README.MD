@@ -29,7 +29,7 @@
 |                      PHASE 4: MODELLING                     |  |   |
 | 1. Model development                                        |  |   |
 +-------------------------------------------------------------+  |   |
-                               |               if poor performance   | If data issue
+                               |                                 |   | If data issue
                                v                                 |   |
 +-------------------------------------------------------------+  |   |
 |                     PHASE 5: EVALUATION                     |--+   |
