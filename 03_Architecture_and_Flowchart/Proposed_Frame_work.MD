@@ -1,6 +1,5 @@
 # 1. Proposed Architecture Diagram
-
-                      ```text
+ ```text
                       +-------------------------------------------------------------+
                       |                    DATA COLLECTION MODULE                   |
                       | 1. Bonafide samples (Direct / Angled / Side)                |
