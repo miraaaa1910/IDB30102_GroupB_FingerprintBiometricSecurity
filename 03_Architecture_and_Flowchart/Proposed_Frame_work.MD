@@ -1,5 +1,5 @@
 # 1. Proposed Architecture Diagram
-              ```text
+           ```text
 
                       +-------------------------------------------------------------+
                       |                    DATA COLLECTION MODULE                   |
