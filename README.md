@@ -62,7 +62,7 @@ To develop and evaluate a machine learning-based approach for detecting puppet a
 |Numerical Processing|	NumPy	|
 |Data Serialization	|Python Pickle / JSON	|
 |Dataset	|Fingerprint dataset containing Genuine and Puppet attack samples |
-|Machine Learning Model|	Linear Support Vector Machine (LinearSVC) |
+|Machine Learning Model|  Support Vector Machine (SVM) with RBF Kernel |
 |Development Environment|Python 3.x|
 
 ## Mapping Technical Work to Research Objectives
@@ -70,7 +70,7 @@ To develop and evaluate a machine learning-based approach for detecting puppet a
 |---|---|---|
 |RO1| To develop a dataset containing genuine and puppet attack fingerprint samples for machine learning-based detection. |  05_Data_or_Sample_Input/ |
 |RO2| To develop a machine learning model for classifying genuine fingerprint samples and puppet attack samples.| 03_Architecture_and_Flowchart/ and 04_Source_Code/ |
-|RO3| To evaluate the performance of the developed machine learning model using appropriate evaluation metrics such as  accuracy, precision, recall, F1-score, ROC-AUC, APCER, BPCER, and ACER. | 06_Results_or_Expected_Output/|
+|RO3| To evaluate the performance of the developed machine learning model using appropriate evaluation metrics such as  accuracy, precision, recall, F1-score, ROC-AUC, APCER, BPCER, and ACER. | 06_Result_or_Expected_Output/|
 
 ## Instruction for Executing Preliminary Code
 1. Install Python 3.x on the computer.
@@ -78,7 +78,7 @@ To develop and evaluate a machine learning-based approach for detecting puppet a
    ````
    pip install numpy opencv-python scikit-image scikit-learn
    ````
-3. Place the fingerprint dataset inside the dataset/ folder using the required structure:
+3. Place the fingerprint dataset inside the 05_Data_or_Sample_Input/ folder using the required structure:
    ````
    dataset/
    ├── Genuine/
